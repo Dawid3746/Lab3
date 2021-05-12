@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button layoutX="78.0" layoutY="77.0" mnemonicParsing="false" onAction="#OnAction" text="Kliknij mnie" textFill="RED">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <TextField fx:id="txtLicznik" layoutX="226.0" layoutY="175.0" />
+      <VBox layoutX="27.0" layoutY="14.0" prefHeight="83.0" prefWidth="279.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blacha ze stali/Blacha ze stali nierdzewnej">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="52.0" layoutY="77.0" prefHeight="75.0" prefWidth="279.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="84.0" text="Wysokość(cm):" />
+                  <Spinner fx:id="spinnerWysokosc" editable="true" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="84.0" text="Promień(cm):" />
+                  <Spinner fx:id="spinnerPromien" editable="true" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="84.0" text="Grubość(cm):" />
+                  <Spinner fx:id="spinnerGrubosc" editable="true" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="btnMain" layoutX="163.0" layoutY="341.0" mnemonicParsing="false" onAction="#onBtnAction" text="OBLICZ" />
+      <HBox layoutX="90.0" layoutY="210.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Koszt(zł):" wrappingWidth="86.177734375" />
+            <TextField fx:id="txtKoszt" editable="false" prefHeight="25.0" prefWidth="115.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="90.0" layoutY="266.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Objętość(cm^3):" />
+            <TextField fx:id="txtObjetosc" editable="false" prefHeight="25.0" prefWidth="114.0" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
